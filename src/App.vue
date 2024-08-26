@@ -13,49 +13,55 @@ import { RouterLink, RouterView } from 'vue-router'
         </div>
       </nav>
   </header>
-  <RouterView />
+  <section class="container">
+    <RouterView />
+  </section>
 </template>
 
 <style >
-header{
-  background-color: white;
-  width: 100%;
-  height: 4rem;
-}
-header .router-link-active{
-  color:rgb(249 115 22);
-} 
-header nav {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;  
-  gap: 20px;
-  padding: 1.2rem;
-  font-size:20px ;
-  color: black;
-  font-weight: bold;
-}
+  :root{
+    --vt-c-orange:  rgb(249,115,22);
+  }
+  header{
+    background-color: white;
+    width: 100%;
+    height: 4rem;
+  }
+  header .router-link-active{
+    color:var(--vt-c-orange);
+  } 
+  header nav {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;  
+    gap: 20px;
+    padding: 1.2rem;
+    font-size:20px ;
+    color: black;
+    font-weight: bold;
+  }
 
-header .nav-links{
-  display: flex;
-  gap: 20px;
-}
+  header .nav-links{
+    display: flex;
+    gap: 20px;
+  }
 
-body{
-  margin: 0;
-  background-color: rgb(243 244 246);
-  color: black;
-}
-#app {
-  font-weight: normal;
-}
+  body{
+    margin: 0;
+    background-color: rgb(243 244 246);
+    color: black;
+  }
+  #app {
+    font-weight: normal;
+  }
 
-a {
-  text-decoration: none;
-  color: black;
-}
+  a {
+    text-decoration: none;
+    color: black;
+  }
 
-header{
-
-}
+  .container{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 </style>
