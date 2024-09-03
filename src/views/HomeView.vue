@@ -1,17 +1,21 @@
 <template>
-  <div >
-    <h4 class="title">Random Meals</h4>
-  </div>
-  <div class="meals-grid">
-    
-  </div>
+   <Meals :meals="store.meals" title="Trending Recipes"></Meals>
 </template>
 <script setup>
-  
+import { onMounted, ref } from 'vue';
+import Meals from '../components/Meals.vue';
+import { useMealsStore } from '@/stores/meals';
+import axiosClient from '@/axiosClient';
+const store = useMealsStore();
+
+onMounted(async ()=>{
+  for (let i=0;i<15;i++){
+    const response = await axiosClient.get('random.php');
+    store.meals.push(response.data.meals[0])
+  }
+})
+
 </script>
 <style scoped>
-.title{
-  color: var(--vt-c-orange);
-  font-size:22px;
-}
+
 </style>
