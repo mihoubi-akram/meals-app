@@ -13,7 +13,7 @@
 
 <script setup>
 import MealItem from './MealItem.vue';
-    const props = defineProps({
+    defineProps({
         meals:{
             type:Array,
             required:true,
@@ -23,7 +23,6 @@ import MealItem from './MealItem.vue';
           required:true,
         }
     })
-    console.log(props);
 </script>
 
 <style>

@@ -15,7 +15,7 @@
   </template>
   
   <script setup>
-  const props = defineProps({
+ defineProps({
     meal: {
       required: true,
       type: Object
