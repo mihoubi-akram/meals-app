@@ -8,8 +8,8 @@
             <span class="tag">{{ meal.strCategory }}</span>
             <span class="tag">{{ meal.strArea }}</span>
           </div>
-          <a :href="meal.strYoutube" class="youtube-link" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
         </div>
+        <a :href="meal.strYoutube" class="youtube-link" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
       </router-link>
     </div>
   </template>
@@ -45,7 +45,7 @@
   }
   
   .card-body {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     text-align: center;
   }
   
@@ -83,6 +83,7 @@
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    margin-bottom: 10px;
   }
   
   .youtube-link:hover {
