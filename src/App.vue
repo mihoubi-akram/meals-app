@@ -8,7 +8,6 @@
 
 <script setup>
 import Navbar from './components/Navbar.vue';
-import SearchBar from './components/searchBar.vue';
 
 </script>
 <style >
