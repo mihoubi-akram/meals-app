@@ -11,7 +11,7 @@ const store = useMealsStore();
 onMounted(async ()=>{
   for (let i=0;i<15;i++){
     const response = await axiosClient.get('random.php');
-    store.meals.push(response.data.meals[0])
+    store.addMeal(response.data.meals[0])
   }
 })
 
