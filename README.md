@@ -1,14 +1,8 @@
 # vue-meals
+![Capture d’écran du 2024-09-04 01-15-43](https://github.com/user-attachments/assets/42cb7fed-9055-43ef-ac37-5e9d4ab276fd)
+![Capture d’écran du 2024-09-04 01-15-47](https://github.com/user-attachments/assets/b1547004-b4dd-446e-be8c-d8efa248e82f)
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
