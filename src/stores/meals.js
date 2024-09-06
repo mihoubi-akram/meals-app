@@ -9,7 +9,7 @@ export const useMealsStore = defineStore('Meals', () => {
     //Actions
     const searchMealsRandomly = async()=>{
         meals.value = [];
-        for (let i=0;i<3;i++){
+        for (let i=0;i<15;i++){
             const response = await axiosClient.get('random.php');
             meals.value.push(response.data.meals[0])
           }
