@@ -9,21 +9,19 @@
       </div>
       <div class="meal-tags">
         <div v-if="meal.strCategory && meal.strCategory.trim() !== ''">
-          <span class="tag">{{ meal.strCategory }}</span>
+          <Tag :label="meal.strCategory" type="category"></Tag>
         </div>
         <div v-if="meal.strArea && meal.strArea.trim() !== ''">
-          <span class="tag">{{ meal.strArea }}</span>
+          <Tag :label="meal.strArea" type="area"></Tag>
         </div>
         <div v-if="meal.strTags && meal.strTags.trim() !== ''" v-for="(tag, index) in tagsArray" :key="index">
-            <span class="tag">
-              {{ tag }}
-            </span>
+            <Tag :label="tag" type="tag"></Tag>
         </div>
       </div>
       <div class="meal-ingredients">
         <strong>Ingredients:</strong>
         <div class="ingredients">
-          <span v-for="value in ingredients" :key="value" class="ingredient-tag">{{ value }}</span>
+          <Tag v-for="value in ingredients" :key="value" :label="value" type="ingredient" />
         </div>
       </div>
       <div class="meal-instructions">
@@ -37,6 +35,7 @@
 import { computed, onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import axiosClient from '../axiosClient';
+import Tag from '../components/Tag.vue';
 
 const meal = ref({});
 const route = useRoute();
@@ -109,13 +108,6 @@ onMounted(async () => {
   text-align: center;
 }
 
-.tag {
-  background-color: #ff6347;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 1rem;
-}
 
 .ingredient-tag {
   background-color: #ffa500;

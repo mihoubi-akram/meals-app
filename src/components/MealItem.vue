@@ -5,8 +5,8 @@
         <div class="card-body">
           <h2 class="card-title">{{ meal.strMeal }}</h2>
           <div class="tags">
-            <span class="tag">{{ meal.strCategory }}</span>
-            <span class="tag">{{ meal.strArea }}</span>
+            <Tag :label="meal.strCategory" :type="meal"></Tag>
+            <Tag :label="meal.strArea" :type="meal"></Tag>
           </div>
         </div>
         <a :href="meal.strYoutube" class="youtube-link" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
@@ -15,6 +15,7 @@
   </template>
   
   <script setup>
+  import Tag from '../components/Tag.vue';
  defineProps({
     meal: {
       required: true,

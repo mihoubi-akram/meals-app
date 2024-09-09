@@ -5,7 +5,6 @@
 import { onMounted } from 'vue';
 import Meals from '../components/Meals.vue';
 import { useMealsStore } from '@/stores/meals';
-import axiosClient from '@/axiosClient';
 const store = useMealsStore();
 
 onMounted(async ()=>{
