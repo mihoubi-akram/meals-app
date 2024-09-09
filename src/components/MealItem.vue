@@ -9,8 +9,8 @@
             <Tag :label="meal.strArea" :type="meal"></Tag>
           </div>
         </div>
-        <a :href="meal.strYoutube" class="youtube-link" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
       </router-link>
+      <a :href="meal.strYoutube" class="youtube-link" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
     </div>
   </template>
   
